@@ -1,0 +1,43 @@
+<h2 class="text-3xl font-medium text-black my-4">Your Sessions</h2>
+<div class="mt-3 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  
+  <!-- Today Sessions -->
+  <div class="flex flex-col rounded-lg shadow-lg bg-gradient-to-br from-blue-500 to-blue-700 text-white p-4">
+    <div class="flex justify-between items-center">
+      <h3 class="text-lg font-semibold">Today Sessions</h3>
+      <a href="/playerSessions/todaysSessions" class="p-2 rounded-full bg-white text-blue-500 hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+        </svg>
+      </a>
+    </div>
+    <p class="mt-2 text-sm">Total: <span class="font-bold"><%= todaysCreatedSessions.length + todaysJoinedSessions.length %></span> Sessions</p>
+  </div>
+
+  <!-- Created Sessions -->
+  <div class="flex flex-col rounded-lg shadow-lg bg-gradient-to-br from-green-500 to-green-700 text-white p-4">
+    <div class="flex justify-between items-center">
+      <h3 class="text-lg font-semibold">Created Sessions</h3>
+      <a href="/playerSessions/createdSessions" class="p-2 rounded-full bg-white text-green-500 hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+        </svg>
+      </a>
+    </div>
+    <p class="mt-2 text-sm">Total: <span class="font-bold"><%= createdSessions.length %></span> Sessions</p>
+  </div>
+
+  <!-- Joined Sessions -->
+  <div class="flex flex-col rounded-lg shadow-lg bg-gradient-to-br from-purple-500 to-purple-700 text-white p-4">
+    <div class="flex justify-between items-center">
+      <h3 class="text-lg font-semibold">Joined Sessions</h3>
+      <a href="/playerSessions/joinedSessions" class="p-2 rounded-full bg-white text-purple-500 hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+        </svg>
+      </a>
+    </div>
+    <p class="mt-2 text-sm">Total: <span class="font-bold"><%= joinedSessions.length %></span> Sessions</p>
+  </div>
+
+</div>

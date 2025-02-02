@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-50">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="csrf-token" content="<%= csrfToken %>">
+    <title>Sports Manager</title>
+    <body>
+      <style>
+        body{
+          background-image: url("https://static.vecteezy.com/system/resources/previews/020/919/579/non_2x/sports-background-international-sports-day-illustration-graphic-design-for-the-decoration-of-gift-certificates-banners-and-flyer-free-vector.jpg");
+          background-repeat: no-repeat;
+        }
+      </style>
+    </body>
+</head>
+<body class="h-full bg-gray-50">
+    <div>
+        <%- include('../components/sidebar.ejs') %>
+        
+        <main class="py-10 lg:pl-72 bg-gradient-to-r from-indigo-50 to-teal-50">
+            <div class="px-4 sm:px-6 lg:px-8">
+                <!-- Your content -->
+                <h2 class="text-4xl font-semibold text-gray-900 my-4">Reports</h2>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <%- include('../components/reportsForm.ejs') %>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <%- include('../components/mobileNavbar.ejs') %>
+</body>
+</html>
