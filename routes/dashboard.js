@@ -2,7 +2,6 @@
 const express = require("express");
 const router = express.Router();
 const { Sport, Session, UserSession } = require("../models");
-
 router.get("/", async (req, res) => {
   try {
     const sports = await Sport.getSports();
